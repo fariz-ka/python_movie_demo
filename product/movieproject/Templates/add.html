@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    <form  method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="text"
+              name="Name"
+              placeholder="Enter Movie Name"
+              class="formbold-form-input"
+              />
+              <label  class="formbold-form-label"> Name </label>
+          </div>
+          <div>
+              <input
+              type="text"
+              name="Dis"
+              placeholder="Enter Movie Description"
+              class="formbold-form-input"
+              />
+              <label  class="formbold-form-label"> Description </label>
+          </div>
+        </div>
+
+        <div class="formbold-input-flex">
+          <div>
+              <input
+              type="text"
+              name="Year"
+              placeholder="Enter Movie Year"
+              class="formbold-form-input"
+              />
+              <label  class="formbold-form-label"> Year </label>
+          </div>
+          <div>
+              <input
+              type="file"
+              name="img"
+              placeholder="Upload File"
+              class="formbold-form-input"
+              />
+              <label  class="formbold-form-label"> Upload File </label>
+          </div>
+        </div>
+
+        <button class="formbold-btn">
+            SUBMIT
+        </button>
+    </form>
+  </div>
+</div>
+
+ {% endblock %}
